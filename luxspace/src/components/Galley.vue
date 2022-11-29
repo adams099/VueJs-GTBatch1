@@ -1,5 +1,5 @@
 <template>
-    <div class="row mx-5 mb-5">
+    <div class="row mx-5 mb-5 mt-5">
         <!-- pilihan -->
         <div class="col-2 d-flex flex-column justify-content-between">
             <div><a href="#"><img src="../assets/img/side-1.png" class="rounded-circle" alt="kursi1"></a></div>
@@ -10,11 +10,11 @@
     
         <!-- gambar kursi -->
         <div class="col-6">
-            <img src="../assets/img/chair.png" alt="kursi">
+            <img :src="require('@/assets/img/' + imageLink + '.png')" alt="kursi" class="img">
         </div>
         
         <!-- isi -->
-        <div class="col-4">
+        <div class="col-4"> 
             <div class="mb-40">
                 <h2>Chair Thatty</h2>
                 <p>IDR 12.000.000</p>
@@ -33,7 +33,8 @@
 
 <script>
 export default {
-    name : 'GalleyComponent'
+    name : 'GalleyComponent',
+    props: ['imageLink']
 }
 </script>
 

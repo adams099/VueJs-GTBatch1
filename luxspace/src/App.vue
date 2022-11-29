@@ -2,8 +2,8 @@
   <div id="app">
     <Navbar></Navbar>
     <Breadcrumb></Breadcrumb>
-    <Galley></Galley>
-    <Slider></Slider>
+    <Galley :imageLink="img"></Galley>
+    <Slider @changeImg="fromSlider"></Slider>
     <Footer></Footer>
     <Copyright></Copyright>
   </div>
@@ -19,6 +19,7 @@ import Copyright from './components/Copyright.vue';
 
 export default {
   name: 'App',
+
   components: {
     Navbar,
     Breadcrumb,
@@ -26,6 +27,18 @@ export default {
     Slider,
     Footer,
     Copyright
+  },
+
+  data(){
+    return{
+      img : "chair"
+    }
+  },
+
+  methods : {
+    fromSlider : function(Image) {
+      this.img = Image
+    }
   }
 }
 </script>
@@ -66,5 +79,10 @@ export default {
 .bg-img-katalog {
     padding: 10px;
     border-radius: 20px;
+}
+
+.img {
+  height: 609px;
+  width: 560px;
 }
 </style>
