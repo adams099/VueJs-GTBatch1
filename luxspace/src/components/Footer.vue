@@ -1,5 +1,5 @@
 <template>
-  <footer>
+    <footer>
         <div class="footerTitle text-center my-5">
 
             <a class="navbar-brand" href="#">
@@ -36,16 +36,18 @@
                 <form class="form-inline">
                     <input class="form-control mr-sm-2 bg-light border-0" type="search" placeholder="Your Email Address"
                         aria-label="Search">
-                    <button class="button my-2 my-sm-0" type="submit" style="background-color: pink;"><img src="../assets/img/tele-icon.png" alt=""></button>
+                    <button class="button my-2 my-sm-0" type="submit" style="background-color: pink;"><img
+                            src="../assets/img/tele-icon.png" alt=""></button>
                 </form>
             </div>
-        </div><hr>
+        </div>
+        <hr>
     </footer>
 </template>
 
 <script>
 export default {
-    name : 'FooterComponent'
+    name: 'FooterComponent'
 }
 </script>
 

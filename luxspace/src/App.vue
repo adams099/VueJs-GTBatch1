@@ -1,88 +1,58 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
-    <Breadcrumb></Breadcrumb>
-    <Galley :imageLink="img"></Galley>
-    <Slider @changeImg="fromSlider"></Slider>
-    <Footer></Footer>
-    <Copyright></Copyright>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue';
-import Breadcrumb from "./components/Breadcrumb.vue";
-import Galley from './components/Galley.vue';
-import Slider from './components/Slider.vue';
-import Footer from './components/Footer.vue';
-import Copyright from './components/Copyright.vue';
+
 
 export default {
   name: 'App',
 
-  components: {
-    Navbar,
-    Breadcrumb,
-    Galley,
-    Slider,
-    Footer,
-    Copyright
-  },
-
-  data(){
-    return{
-      img : "chair"
-    }
-  },
-
-  methods : {
-    fromSlider : function(Image) {
-      this.img = Image
-    }
-  }
 }
 </script>
 
 <style>
 .nav {
-    width: 100%;
-    height: 50px;
-    line-height: 10px;
-    background-color: rgb(216, 216, 216);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    padding-left: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  line-height: 10px;
+  background-color: rgb(216, 216, 216);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
 .nav a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
-.btn {
-    width: 200px;
-    background-color: pink;
-    border-radius: 50px;
+.btnn {
+  width: 200px;
+  background-color: pink;
+  border-radius: 50px;
 }
 
 .mb-40 {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .katalog {
-    background-color: rgb(216, 216, 216);
+  background-color: rgb(216, 216, 216);
 }
 
 .bg-img-katalog {
-    padding: 10px;
-    border-radius: 20px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-.img {
-  height: 609px;
-  width: 560px;
+.button {
+  width: 50px;
+  border-radius: 10px;
 }
 </style>
