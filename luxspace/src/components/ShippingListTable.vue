@@ -53,16 +53,21 @@ export default {
         },
 
         deleteShippingFunc(id) {
+            if (confirm("Apakah Anda Yakin?")) {
+                shippingService.deleteShipping(id)
+                    .then(response => {
+                        console.log(response.data);
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    });
+                window.setInterval(() => {
+                    location.reload();
+                }, 1000)
 
-            shippingService.deleteShipping(id)
-                .then(response => {
-                    console.log(response.data);
-                })
-                .catch(e => {
-                    console.log(e);
-                });
-            location.reload();
-
+            } else {
+                alert("Hapus dibatalkan!")
+            }
         }
     },
 

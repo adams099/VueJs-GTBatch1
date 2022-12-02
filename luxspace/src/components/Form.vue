@@ -1,7 +1,8 @@
 <template>
     <div class="row justify-content-center">
         <div class="col col-md-5 my-5">
-            <form class="border rounded-sm border-primary p-5" @submit.prevent="inputShipping" id="form-checkout">
+            <form class="border rounded-sm border-primary p-5" @submit.prevent="inputShipping" id="form-checkout"
+                v-show="!success">
                 <h1 class="mb-5" align="center">Shipping Form</h1>
                 <div class="form-row">
                     <div class="form-group col-md-6">

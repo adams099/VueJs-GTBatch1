@@ -21,7 +21,7 @@
                 </div>
 
                 <div>
-                    <a class="nav-link text-dark" href="#">Rewards</a>
+                    <router-link to="/shippingList" class="nav-link text-dark">Shipping List</router-link>
                 </div>
 
                 <div>
